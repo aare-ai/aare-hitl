@@ -1,0 +1,8 @@
+# Generation config
+model: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+adapter: ./output
+prompt: "What is machine learning?"
+max_tokens: 1024
+
+# Device: auto | cpu | mps | cuda
+device: mps

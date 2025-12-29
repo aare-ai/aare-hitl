@@ -1,0 +1,46 @@
+{
+  "builder_name": "json",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "json",
+  "dataset_size": 2998,
+  "description": "",
+  "download_checksums": {
+    "/private/var/folders/c6/vbbrpg1d0jx4813f_3x849c40000gn/T/gradio/8456977fa55d9372dfd86349053fd263210babcef12487572b8691a6515818a3/sample_dataset.json": {
+      "num_bytes": 3541,
+      "checksum": null
+    }
+  },
+  "download_size": 3541,
+  "features": {
+    "instruction": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "input": {
+      "dtype": "string",
+      "_type": "Value"
+    },
+    "output": {
+      "dtype": "string",
+      "_type": "Value"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 6539,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 2998,
+      "num_examples": 10,
+      "dataset_name": "json"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

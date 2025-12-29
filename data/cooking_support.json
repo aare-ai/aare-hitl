@@ -1,0 +1,366 @@
+[
+  {
+    "instruction": "My cake didn't rise. What went wrong?",
+    "output": "There are several common reasons a cake doesn't rise: 1) Expired baking powder or baking soda - test by adding to water, it should bubble. 2) Overmixing the batter, which deflates air bubbles. 3) Oven temperature too low - use an oven thermometer to verify. 4) Opening the oven door too early. 5) Incorrect measurements. Try a fresh batch with new leavening agents and avoid overmixing."
+  },
+  {
+    "instruction": "How do I substitute eggs in baking?",
+    "output": "For each egg, you can use: 1) 1/4 cup unsweetened applesauce, 2) 1 mashed ripe banana, 3) 3 tbsp aquafaba (chickpea water), 4) 1/4 cup silken tofu blended smooth, 5) 1 tbsp ground flaxseed mixed with 3 tbsp water (let sit 5 min). Applesauce works best for moist cakes, flax eggs for cookies, and aquafaba for meringues."
+  },
+  {
+    "instruction": "My rice is always mushy. How do I fix this?",
+    "output": "For fluffy rice: 1) Rinse rice thoroughly until water runs clear to remove excess starch. 2) Use the correct water ratio - typically 1.5:1 for long grain, 1:1 for jasmine/basmati. 3) Don't lift the lid while cooking. 4) Once done, remove from heat and let rest 5-10 minutes. 5) Fluff with a fork, not a spoon. If using a rice cooker, reduce water slightly."
+  },
+  {
+    "instruction": "What's the difference between baking soda and baking powder?",
+    "output": "Baking soda is pure sodium bicarbonate - it needs an acid (buttermilk, lemon, vinegar) to activate. Baking powder contains baking soda plus an acid, so it's self-activating with moisture and heat. Use baking soda when your recipe has acidic ingredients. Use baking powder when it doesn't. They're not directly interchangeable - using the wrong one affects taste and rise."
+  },
+  {
+    "instruction": "How do I know when my steak is done without cutting it?",
+    "output": "Use the finger test: touch your thumb to different fingers while pressing the meat. Thumb to index = rare (soft), thumb to middle = medium-rare (slightly firmer), thumb to ring = medium (firm), thumb to pinky = well-done (very firm). Or use an instant-read thermometer: 125°F rare, 135°F medium-rare, 145°F medium, 155°F medium-well, 165°F well-done."
+  },
+  {
+    "instruction": "My cookies spread too much and are flat. Help!",
+    "output": "Flat cookies usually mean: 1) Butter was too warm - it should be cool room temperature, not melted. 2) Not enough flour - measure by spooning into cup, not scooping. 3) Dough wasn't chilled - refrigerate for 30+ minutes before baking. 4) Baking sheets too hot - let them cool between batches. 5) Too much sugar or not enough leavening. Try chilling your dough and using cooler butter."
+  },
+  {
+    "instruction": "How do I prevent pasta from sticking together?",
+    "output": "To prevent sticky pasta: 1) Use plenty of water - at least 4 quarts per pound. 2) Wait for a rolling boil before adding pasta. 3) Stir immediately after adding and occasionally while cooking. 4) Don't add oil to the water - it prevents sauce from sticking later. 5) Reserve pasta water before draining. 6) Toss immediately with sauce or a little butter/oil if serving later."
+  },
+  {
+    "instruction": "What can I use instead of buttermilk?",
+    "output": "Make a quick buttermilk substitute: Add 1 tablespoon of lemon juice or white vinegar to 1 cup of regular milk. Stir and let sit for 5-10 minutes until it curdles slightly. You can also use: 1 cup plain yogurt thinned with a little milk, or 1 cup milk mixed with 1.75 tsp cream of tartar. These work well in pancakes, biscuits, and cakes."
+  },
+  {
+    "instruction": "My soup is too salty. How do I fix it?",
+    "output": "To reduce saltiness: 1) Add more unsalted liquid (water, stock, or cream). 2) Add a peeled potato - it absorbs some salt (remove before serving). 3) Add acid like lemon juice or vinegar to balance the flavor. 4) Add sugar or honey sparingly to counteract. 5) Dilute with more unsalted ingredients. Don't add raw potato and leave it in - that's a myth for complete salt removal."
+  },
+  {
+    "instruction": "How long can I keep leftovers in the refrigerator?",
+    "output": "General guidelines: Cooked meat, poultry, fish - 3-4 days. Cooked pasta, rice, vegetables - 3-5 days. Soups and stews - 3-4 days. Pizza - 3-4 days. Deli meat - 3-5 days after opening. Always store in airtight containers, cool food before refrigerating, and when in doubt, throw it out. If it smells off or looks questionable, don't risk it."
+  },
+  {
+    "instruction": "Why does my homemade bread turn out dense?",
+    "output": "Dense bread is usually caused by: 1) Not enough kneading - knead for 8-10 minutes until smooth and elastic. 2) Yeast problems - check expiration date and proof in warm water first. 3) Water too hot (kills yeast) or too cold (doesn't activate). 4) Not enough rising time - dough should double in size. 5) Too much flour - measure carefully. 6) Oven too cool - bread needs high initial heat."
+  },
+  {
+    "instruction": "How do I properly season a cast iron pan?",
+    "output": "To season cast iron: 1) Wash with hot soapy water and dry completely. 2) Apply a thin layer of vegetable oil or shortening all over, including the handle and bottom. 3) Wipe off excess - it should look almost dry. 4) Place upside down in a 450°F oven for 1 hour with foil below to catch drips. 5) Let cool in oven. Repeat 2-3 times for best results."
+  },
+  {
+    "instruction": "My caramel seized and turned grainy. What happened?",
+    "output": "Grainy caramel is caused by crystallization, usually from: 1) Stirring the sugar while it's dissolving - only swirl the pan. 2) Sugar crystals on the pan sides - brush with water to dissolve them. 3) Using a dirty spoon or utensils. To prevent: Use a wet pastry brush on the sides, don't stir, and add a little corn syrup or lemon juice to inhibit crystals."
+  },
+  {
+    "instruction": "How do I make crispy bacon in the oven?",
+    "output": "For oven bacon: 1) Preheat to 400°F. 2) Line a baking sheet with foil and place a wire rack on top. 3) Arrange bacon in a single layer. 4) Bake 15-20 minutes until desired crispiness. 5) Transfer to paper towels. No flipping needed. For extra crispy, start in a cold oven and bake at 400°F for 25-30 minutes. Thick-cut takes longer."
+  },
+  {
+    "instruction": "Can I freeze cooked rice?",
+    "output": "Yes! Frozen rice is great for quick meals. To freeze: 1) Cool rice completely first. 2) Portion into freezer bags or containers, pressing flat. 3) Remove as much air as possible. 4) Label and freeze for up to 6 months. To reheat: Microwave with a splash of water, covered, for 2-3 minutes. Or add directly to stir-fries and soups. Fried rice actually works better with previously frozen rice."
+  },
+  {
+    "instruction": "My garlic always burns. How do I cook it properly?",
+    "output": "Garlic burns quickly because it has low moisture and high sugar. To avoid burning: 1) Add garlic after onions are already softened. 2) Use medium-low heat. 3) Mince or slice evenly for consistent cooking. 4) Cook only until fragrant, about 30 seconds to 1 minute. 5) If adding to hot oil, add other ingredients quickly. 6) For roasting, keep cloves whole and wrapped in foil."
+  },
+  {
+    "instruction": "What's the best way to thaw frozen meat?",
+    "output": "Safest methods: 1) Refrigerator - slowest but best quality. Allow 24 hours per 5 lbs. 2) Cold water - submerge sealed meat, change water every 30 minutes. Takes 1-3 hours. 3) Microwave - use defrost setting, cook immediately after. Never thaw on the counter - bacteria grow rapidly at room temperature. Refrigerator-thawed meat can be refrozen safely."
+  },
+  {
+    "instruction": "How do I keep avocados from browning?",
+    "output": "To prevent browning: 1) Leave the pit in unused halves. 2) Brush cut surface with lemon or lime juice. 3) Press plastic wrap directly onto the surface (no air gaps). 4) Store with a cut onion in an airtight container. 5) For guacamole, add a thin layer of water on top and drain before serving. The browning is just oxidation - it's still safe to eat, just less appetizing."
+  },
+  {
+    "instruction": "Why is my fried chicken soggy, not crispy?",
+    "output": "Soggy fried chicken causes: 1) Oil not hot enough - should be 350-375°F. 2) Overcrowding the pan - drops oil temperature. 3) Not letting the coating set - rest breaded chicken 10 minutes before frying. 4) Covering while resting - steam makes it soggy. 5) Wet chicken before breading - pat very dry first. 6) Draining on paper towels - use a wire rack instead."
+  },
+  {
+    "instruction": "How do I make fluffy scrambled eggs?",
+    "output": "For fluffy scrambled eggs: 1) Whisk eggs thoroughly with a splash of milk or cream. 2) Use low heat - patience is key. 3) Add cold butter to the pan, then eggs. 4) Stir constantly with a spatula, making large curds. 5) Remove from heat while still slightly wet - they'll continue cooking. 6) Season at the end, not before cooking. Some chefs add cream cheese for extra fluffiness."
+  },
+  {
+    "instruction": "My pie crust is tough. What am I doing wrong?",
+    "output": "Tough pie crust means overworked gluten. To fix: 1) Keep everything cold - butter, water, even flour. 2) Cut butter in until pea-sized pieces remain - don't over-process. 3) Add ice water sparingly, just until dough holds together. 4) Handle the dough as little as possible. 5) Chill dough 30 minutes before rolling. 6) Don't re-roll scraps too many times. Consider using vodka instead of some water - it evaporates and reduces gluten formation."
+  },
+  {
+    "instruction": "How long should I marinate chicken?",
+    "output": "Marinating times depend on the marinade: Acidic marinades (lemon, vinegar) - 30 minutes to 2 hours max, or the acid will break down the meat and make it mushy. Oil-based marinades - up to 24 hours. Yogurt-based - 4-24 hours. For best results, marinate in the refrigerator, not on the counter. Always discard used marinade or boil it thoroughly before using as a sauce."
+  },
+  {
+    "instruction": "What's the best oil for frying?",
+    "output": "Best frying oils have high smoke points and neutral flavor: 1) Peanut oil (450°F) - classic for deep frying. 2) Vegetable/canola oil (400-450°F) - affordable all-purpose. 3) Avocado oil (520°F) - highest smoke point. 4) Rice bran oil (450°F) - light flavor. Avoid olive oil for high-heat frying. For pan-frying at medium heat, regular olive oil works fine. Always match oil smoke point to cooking temperature."
+  },
+  {
+    "instruction": "My homemade mayo broke. Can I fix it?",
+    "output": "Yes! To fix broken mayo: 1) Start fresh with a new egg yolk in a clean bowl. 2) Very slowly whisk in the broken mayo, drop by drop at first. 3) Continue until it re-emulsifies. Prevention: Add oil very slowly at the start, ensure eggs are room temperature, and use a blender for more stability. If it breaks from the fridge, let it warm up and whisk again."
+  },
+  {
+    "instruction": "How do I make vegetables less bitter?",
+    "output": "To reduce bitterness: 1) Salt and drain (especially for eggplant) - draws out bitter compounds. 2) Blanch briefly in salted boiling water. 3) Roast at high heat - caramelization adds sweetness. 4) Add acid (lemon, vinegar) or fat (butter, oil) to balance. 5) Pair with sweet ingredients. 6) For greens like kale, massage with oil and salt. Young vegetables are usually less bitter than mature ones."
+  },
+  {
+    "instruction": "Can I use salted butter instead of unsalted in baking?",
+    "output": "You can, but adjust the recipe: 1) Reduce added salt by 1/4 teaspoon per 1/2 cup (1 stick) butter. 2) Salt content varies by brand, so results may be inconsistent. 3) For delicate recipes like buttercream, unsalted is preferred for taste control. For everyday cookies and cakes, salted butter is usually fine. When a recipe specifies unsalted, it's trying to give you precise salt control."
+  },
+  {
+    "instruction": "Why did my chocolate seize when I melted it?",
+    "output": "Chocolate seizes when even a tiny amount of water gets in - steam, wet utensils, or humid environment. To prevent: 1) Ensure all equipment is completely dry. 2) Don't cover while melting (traps steam). 3) Use low heat. To fix seized chocolate: Add warm cream, 1 tablespoon at a time, stirring until smooth - it becomes ganache. Or add a teaspoon of vegetable oil. Prevention is easier than fixing."
+  },
+  {
+    "instruction": "How do I poach an egg perfectly?",
+    "output": "For perfect poached eggs: 1) Use the freshest eggs - whites hold together better. 2) Bring water to a gentle simmer, not a rolling boil. 3) Add a splash of vinegar (helps whites set). 4) Create a gentle whirlpool and slip egg into the center. 5) Cook 3-4 minutes for runny yolk. 6) Remove with a slotted spoon and drain on paper towel. Strain eggs first through a fine mesh to remove watery whites."
+  },
+  {
+    "instruction": "My mashed potatoes are gluey. What went wrong?",
+    "output": "Gluey potatoes are caused by overworking, which releases too much starch. To avoid: 1) Use starchy potatoes like Russets or Yukon Golds. 2) Don't over-boil - they should be tender but not falling apart. 3) Drain well and let steam dry. 4) Use a ricer or masher, never a food processor or blender. 5) Fold in warm butter and cream gently. 6) Don't overmix - stop when just combined."
+  },
+  {
+    "instruction": "How do I store fresh herbs to last longer?",
+    "output": "Storage depends on the herb: Tender herbs (basil, cilantro, parsley) - trim stems, place in a jar with water like flowers, cover loosely with a plastic bag, refrigerate (basil prefers counter). Hardy herbs (rosemary, thyme) - wrap in slightly damp paper towel, store in a zip bag in the fridge. All herbs last 1-3 weeks this way versus days if just thrown in the drawer."
+  },
+  {
+    "instruction": "What temperature should my oven really be?",
+    "output": "Most ovens run 25-50°F off from the dial setting. Solutions: 1) Buy an oven thermometer ($5-10) - essential for baking. 2) Place it in the center of your oven. 3) Check periodically as ovens can vary with age. 4) Note your oven's offset and adjust accordingly. Also, avoid opening the door frequently - you lose 25-50°F each time. Convection settings typically run about 25°F hotter."
+  },
+  {
+    "instruction": "How do I prevent onions from making me cry?",
+    "output": "Tips to reduce tears: 1) Chill onions in the freezer for 15 minutes before cutting. 2) Use a very sharp knife - less cell damage means less gas released. 3) Cut near running water or steam. 4) Cut root end last (most sulfur compounds there). 5) Wear goggles (seriously, it works). 6) Use a fan to blow fumes away. 7) Try sweet onions - they have fewer irritants than yellow onions."
+  },
+  {
+    "instruction": "Is it safe to eat food that's been left out overnight?",
+    "output": "Generally no - the 'danger zone' (40-140°F) allows bacteria to double every 20 minutes. After 2 hours at room temperature (1 hour if above 90°F), food should be discarded. Some exceptions: Hard cheeses, bread, and high-acid foods last longer. Cooked rice is particularly risky - Bacillus cereus spores survive cooking and multiply at room temperature. When in doubt, throw it out."
+  },
+  {
+    "instruction": "How do I make restaurant-quality fried rice?",
+    "output": "Secrets to great fried rice: 1) Use day-old cold rice - fresh rice is too moist. 2) High heat is essential - cook in batches if needed. 3) Use a wok or large skillet. 4) Add ingredients in order: oil, eggs (scramble and remove), aromatics, proteins, vegetables, rice. 5) Season with soy sauce on the hot pan for extra flavor. 6) Don't stir constantly - let rice get slightly crispy."
+  },
+  {
+    "instruction": "My soup has no flavor. How do I fix it?",
+    "output": "Boost soup flavor with: 1) Salt - often the main issue, add gradually and taste. 2) Acid - a splash of lemon, vinegar, or wine brightens everything. 3) Umami - soy sauce, fish sauce, miso, parmesan rind, or tomato paste. 4) Fresh herbs at the end. 5) Better stock - homemade or quality store-bought. 6) Sauté aromatics longer at the start. 7) Finish with butter or cream. Build layers of flavor, don't just boil everything together."
+  },
+  {
+    "instruction": "Can I freeze cheese?",
+    "output": "Yes, but texture changes: Hard cheeses (cheddar, parmesan) freeze best - grate before freezing for easy use. Soft cheeses (brie, cream cheese) become crumbly - use in cooked dishes only. Shredded cheese freezes well for toppings. Wrap tightly in plastic, then foil, and use within 6 months. Thaw in refrigerator. Frozen cheese works great for cooking but not for cheese boards."
+  },
+  {
+    "instruction": "Why does my tomato sauce taste acidic?",
+    "output": "Tomatoes are naturally acidic. To balance: 1) Cook longer - simmering for 45+ minutes mellows acidity. 2) Add a pinch of baking soda - neutralizes acid (use sparingly or it tastes soapy). 3) Add sugar or grated carrot for sweetness. 4) Use San Marzano tomatoes - they're naturally sweeter. 5) Add butter at the end for richness. 6) Include fresh basil, which balances acid. Don't add too much of any one fix."
+  },
+  {
+    "instruction": "How do I know if fish is fresh?",
+    "output": "Signs of fresh fish: 1) Smell - should be mild, like the ocean, not fishy. 2) Eyes - clear and bulging, not cloudy or sunken. 3) Gills - bright red or pink, not brown or slimy. 4) Flesh - firm and springs back when pressed. 5) Scales - shiny and intact. 6) Fillets - moist but not slimy, no browning at edges. Buy from a busy market with high turnover. When buying frozen, avoid packages with ice crystals."
+  },
+  {
+    "instruction": "My banana bread is raw in the middle. Why?",
+    "output": "Raw middle usually means: 1) Oven too hot - the outside browns before the inside cooks. Lower temp to 325°F. 2) Too deep a pan - use the size specified. 3) Not baked long enough - test with a toothpick until it comes out clean. 4) Too much banana - makes batter too wet. Cover with foil if top browns too fast. Banana bread typically takes 55-75 minutes at 325-350°F."
+  },
+  {
+    "instruction": "How do I soften butter quickly?",
+    "output": "Quick softening methods: 1) Cut into small cubes - room temp in 15-20 minutes. 2) Pound between parchment with a rolling pin - 5 minutes. 3) Grate it with a cheese grater. 4) Microwave at 10-second intervals, checking frequently. 5) Place in a warm spot (near preheating oven). Never fully melt for baking - it changes the texture. Properly softened butter should dent when pressed but not be greasy."
+  },
+  {
+    "instruction": "What's the difference between stock and broth?",
+    "output": "Stock is made from bones, collagen-rich, and unseasoned - it's a base for sauces and soups. Broth is made from meat, lighter-bodied, and usually seasoned - ready to eat on its own. Stock has more body and gels when cold due to gelatin. Modern usage often treats them interchangeably. For best results in cooking, use stock for richness. Bone broth is basically just well-made stock."
+  },
+  {
+    "instruction": "How do I prevent my cake from doming?",
+    "output": "Doming happens when edges set before the middle. Solutions: 1) Use bake-even strips or wet towels wrapped around pans. 2) Lower oven temperature by 25°F and bake longer. 3) Wrap the outside of pans in foil. 4) Use proper pan size - too small makes cake rise higher in center. 5) Don't overmix batter. 6) Level with a serrated knife after cooling - professional bakers often do this anyway."
+  },
+  {
+    "instruction": "Can I substitute oil for butter in baking?",
+    "output": "Yes, with adjustments: Use 3/4 the amount (3/4 cup oil for 1 cup butter). Oil makes denser, moister results since butter has water content that creates lift. Works well in: brownies, muffins, quick breads. Not ideal for: cookies (spread too much), pie crust, buttercream. Use neutral-flavored oil unless you want the taste. Melted coconut oil is most butter-like in texture."
+  },
+  {
+    "instruction": "Why is my bread crust too hard?",
+    "output": "Hard crust causes: 1) Baked too long or too hot. 2) Not enough steam in early baking - place a pan of water in the oven. 3) Overproofed dough. 4) Crust dried out cooling - cover with a towel. 5) Low humidity kitchen. For softer crust: Brush with butter immediately after baking, or use milk in the dough. Some breads (like French) are supposed to have a hard crust."
+  },
+  {
+    "instruction": "How do I cook dried beans?",
+    "output": "For dried beans: 1) Sort and rinse, remove any debris. 2) Soak 8-24 hours in water (skip for lentils). 3) Drain and cover with fresh water by 2 inches. 4) Simmer gently - boiling breaks skins. 5) Add salt later - some say it toughens beans, others disagree. 6) Cook until creamy inside, usually 1-2 hours depending on type. Older beans take longer. A pressure cooker cuts time to 20-30 minutes."
+  },
+  {
+    "instruction": "My gravy has lumps. How do I fix it?",
+    "output": "To fix lumpy gravy: 1) Pour through a fine mesh strainer, pressing lumps. 2) Blend with an immersion blender. 3) Whisk vigorously - sometimes that's enough. Prevention: Make a smooth roux first, add liquid gradually while whisking constantly, and use room-temperature liquid. Or make a slurry (flour or cornstarch mixed with cold water) before adding to hot liquid."
+  },
+  {
+    "instruction": "Is it safe to refreeze thawed meat?",
+    "output": "It depends on how it was thawed: Refrigerator-thawed - safe to refreeze, but quality suffers (moisture loss, texture changes). Cold water or microwave-thawed - must be cooked first, then you can freeze the cooked dish. Counter-thawed - risky, bacteria may have grown. When refreezing, do it quickly and use within 1-2 months. Refrozen meat is best for stews, soups, or ground applications."
+  },
+  {
+    "instruction": "How do I get a good sear on meat?",
+    "output": "For a perfect sear: 1) Pat meat completely dry with paper towels. 2) Use high heat - pan should be almost smoking. 3) Use oil with high smoke point (avocado, grapeseed). 4) Don't overcrowd - leave space between pieces. 5) Don't move it - let it develop a crust before flipping. 6) Room temperature meat sears better than cold. Press down slightly for even contact. Season right before searing."
+  },
+  {
+    "instruction": "My homemade ice cream is icy, not creamy. Why?",
+    "output": "Icy ice cream means large ice crystals formed. Fixes: 1) Chill your base completely before churning (preferably overnight). 2) More fat = creamier texture - use heavy cream. 3) Add corn syrup or honey - interferes with crystal formation. 4) Make sure ice cream maker bowl is fully frozen. 5) Don't over-churn. 6) Press plastic wrap on surface before freezing. 7) Add a tablespoon of vodka - lowers freezing point."
+  },
+  {
+    "instruction": "How long do spices last?",
+    "output": "General shelf life: Ground spices - 2-3 years. Whole spices - 3-4 years. Dried herbs - 1-3 years. They don't spoil but lose potency. Test by crushing and smelling - if the aroma is weak, replace them. Store in airtight containers away from heat, light, and humidity (not above the stove!). Buying whole spices and grinding as needed gives the best flavor and longest life."
+  },
+  {
+    "instruction": "Why does my dough keep shrinking when I roll it?",
+    "output": "Shrinking dough means overworked gluten. The protein strands are elastic and want to snap back. Solutions: 1) Let dough rest 30+ minutes in the fridge before rolling. 2) Handle less during mixing. 3) Roll from center outward, rotating often. 4) If it shrinks back, cover and rest 10-15 minutes, then try again. 5) Use lower-protein flour for tender pastry. Patience and cold dough are your friends."
+  },
+  {
+    "instruction": "How do I know when oil is hot enough for frying?",
+    "output": "Ways to test oil temperature: 1) Use a thermometer - most accurate, aim for 350-375°F. 2) Wooden spoon test - bubbles form around the wood when oil is ready. 3) Popcorn kernel - drops and spins when oil reaches 325-350°F. 4) Bread cube test - should brown in 60 seconds at 350°F. 5) Small piece of food - should sizzle immediately. Never fill pot more than 1/3 with oil."
+  },
+  {
+    "instruction": "Can I eat raw cookie dough?",
+    "output": "Traditional raw dough has two risks: 1) Raw eggs - can contain salmonella. 2) Raw flour - can harbor E. coli. For safe edible dough: Heat flour to 165°F in the oven or microwave, and use pasteurized eggs or omit them. Store-bought 'edible' cookie dough is made with treated flour and no eggs. Pregnant women, elderly, and young children should avoid raw dough."
+  },
+  {
+    "instruction": "How do I get rid of cooking smells in my kitchen?",
+    "output": "To remove cooking odors: 1) Simmer water with cinnamon, vanilla, or citrus peels. 2) Leave a bowl of vinegar or baking soda out overnight. 3) Clean surfaces with vinegar solution. 4) Wash fabrics that absorbed smells. 5) Use the exhaust fan while cooking. 6) Boil a pot of water with lemon juice. 7) Grind lemon peels in the garbage disposal. Prevention: Clean splatter immediately and empty trash regularly."
+  },
+  {
+    "instruction": "Why is my whipped cream runny?",
+    "output": "Common causes of failed whipped cream: 1) Cream not cold enough - chill bowl and beaters too. 2) Cream not high enough fat - use heavy whipping cream (36%+ fat). 3) Overbeaten - it goes past stiff peaks to butter quickly. 4) Sugar added too early - wait until soft peaks form. 5) Humid conditions. For more stability, add a tablespoon of powdered sugar or a teaspoon of cornstarch."
+  },
+  {
+    "instruction": "How do I julienne vegetables?",
+    "output": "Julienne means cutting into thin matchstick-sized strips (1/8 inch by 2 inches). Method: 1) Square off the vegetable by cutting off rounded edges. 2) Cut into 2-inch lengths. 3) Cut into 1/8-inch thick slices. 4) Stack slices and cut into 1/8-inch strips. Use a sharp chef's knife and a stable cutting board. A mandoline with a julienne blade is faster for large quantities."
+  },
+  {
+    "instruction": "My curry has no depth of flavor. What's missing?",
+    "output": "To add depth to curry: 1) Toast spices in dry pan before using - releases oils. 2) Cook onion base until deeply golden, 15-20 minutes. 3) Add tomato paste and cook until it darkens. 4) Use whole spices (cinnamon stick, cardamom pods). 5) Add a splash of fish sauce or soy sauce for umami. 6) Finish with fresh herbs, lime, and butter or cream. 7) Let it rest overnight - flavors meld."
+  },
+  {
+    "instruction": "How do I make a slurry for thickening?",
+    "output": "A slurry is starch mixed with cold liquid to prevent lumps. To make: 1) Use 1 tablespoon cornstarch to 1 tablespoon cold water per cup of liquid to thicken. 2) Whisk until completely smooth. 3) Slowly pour into simmering liquid while stirring. 4) Cook 1-2 minutes until thickened. Flour needs 2 tablespoons per tablespoon of cornstarch and longer cooking to remove raw taste."
+  },
+  {
+    "instruction": "Why does my pie filling get watery after baking?",
+    "output": "Watery pie causes: 1) Not enough thickener (cornstarch, flour, or tapioca). 2) Underbaked - filling should bubble for several minutes. 3) Cut too soon - filling needs to cool and set (at least 2 hours). 4) Too much liquid in fruit - macerate with sugar first and drain some juice. 5) Frozen fruit released extra moisture. Add an extra tablespoon of thickener for juicy fruits."
+  },
+  {
+    "instruction": "How do I store brown sugar so it doesn't harden?",
+    "output": "Brown sugar hardens when moisture evaporates. To prevent: Store in an airtight container with a terracotta brown sugar saver (soak in water first), a slice of bread, or a few marshmallows. To soften hardened sugar: Microwave with a damp paper towel for 20 seconds. Or place in a sealed container with a wet paper towel overnight. Adding an apple slice works too."
+  },
+  {
+    "instruction": "What's the difference between chopping, dicing, and mincing?",
+    "output": "These refer to piece size: Chopping - rough, irregular pieces about 1/2-3/4 inch, used for rustic dishes. Dicing - uniform cubes. Large dice is 3/4 inch, medium dice 1/2 inch, small dice 1/4 inch. Mincing - very fine pieces, less than 1/8 inch, almost paste-like for garlic and herbs. Uniform cuts cook evenly and look more professional. Size matters for cooking time."
+  },
+  {
+    "instruction": "How do I rescue an oversalted dish?",
+    "output": "Besides adding more unsalted ingredients: 1) Add acid (lemon, vinegar) - doesn't remove salt but balances taste. 2) Add fat (cream, butter, avocado). 3) Add sweetness (sugar, honey). 4) Dilute with water, stock, or additional unseasoned ingredients. 5) Serve with bland sides (rice, pasta, bread). 6) Add raw potato to absorb some salt (works for soups). The potato myth isn't magic, but it does help somewhat."
+  },
+  {
+    "instruction": "Why does my cheesecake crack?",
+    "output": "Cheesecake cracks from: 1) Overbaking - remove when edges are set but center jiggles. 2) Oven too hot - use 325°F or lower. 3) Too much air beaten in - mix on low, don't whip. 4) Sudden temperature change - cool gradually in oven with door cracked. 5) Overmixing after adding eggs. For insurance, bake in a water bath. If it cracks, cover with sour cream topping or fruit."
+  },
+  {
+    "instruction": "How do I deglaze a pan?",
+    "output": "Deglazing captures the flavorful brown bits (fond) stuck to the pan. Method: 1) Remove cooked meat/vegetables. 2) Keep pan on medium-high heat. 3) Add liquid (wine, stock, or water) - about 1/2 cup. 4) Immediately scrape the bottom with a wooden spoon. 5) Let liquid reduce by half for a quick sauce. 6) Finish with butter for richness. This is the foundation of many pan sauces."
+  },
+  {
+    "instruction": "What's the best way to zest citrus?",
+    "output": "Zesting tips: 1) Use a microplane for finest zest - best for baking. 2) A vegetable peeler gives strips - good for infusing. 3) A zester gives thin curls. 4) Only remove the colored part - white pith is bitter. 5) Wash and dry fruit first. 6) Room temperature fruit zests easier than cold. One lemon yields about 1 tablespoon zest. Freeze extra zest for later use."
+  },
+  {
+    "instruction": "Can I make bread without yeast?",
+    "output": "Yes! Options include: 1) Baking soda/powder breads (Irish soda bread, biscuits). 2) Beer bread - yeast in beer provides some lift. 3) Sourdough - uses wild yeast from a starter. 4) Flatbreads (naan, tortillas) - no leavening needed. 5) Quick breads (banana bread, muffins). No-yeast breads are denser and best eaten fresh. They can't replicate the chewy texture of yeasted bread."
+  },
+  {
+    "instruction": "Why is my fried food greasy?",
+    "output": "Greasy fried food means oil absorption, caused by: 1) Oil not hot enough - food absorbs oil before crust forms. 2) Overcrowding - lowers oil temperature. 3) Batter too thick or thin. 4) Food too wet before coating. 5) Not draining properly - use a wire rack, not paper towels. 6) Wrong oil - use fresh oil with high smoke point. The key is maintaining 350-375°F throughout cooking."
+  },
+  {
+    "instruction": "How do I bloom gelatin?",
+    "output": "Blooming hydrates gelatin before melting. Method: 1) Sprinkle gelatin evenly over cold liquid (1 envelope needs 1/4 cup). 2) Let sit 5-10 minutes until spongy and absorbed. 3) Melt by microwaving 10-20 seconds or placing bowl in hot water. 4) Stir until dissolved and add to recipe. Never boil gelatin - it weakens setting power. Blooming prevents lumps and ensures even distribution."
+  },
+  {
+    "instruction": "What's the best way to cook corn on the cob?",
+    "output": "Popular methods: 1) Boiling - 4-6 minutes in salted water (don't overcook). 2) Grilling - 10-15 minutes, turning, for charred flavor (husk on or off). 3) Roasting - 400°F for 20-25 minutes. 4) Microwaving - 3-4 minutes per ear, husk on, for quick and easy. 5) Steaming - 4-5 minutes. Fresh summer corn needs less cooking. Add salt after cooking - some say it toughens the kernels."
+  },
+  {
+    "instruction": "How do I store fresh berries?",
+    "output": "For longest-lasting berries: 1) Don't wash until ready to use. 2) Line container with paper towels to absorb moisture. 3) Remove any moldy berries immediately (mold spreads fast). 4) Store in a single layer if possible. 5) Keep in the coldest part of fridge. 6) Optional: Quick dip in 1:3 vinegar water solution kills mold spores, rinse and dry thoroughly. Strawberries last 3-7 days, raspberries 2-3 days."
+  },
+  {
+    "instruction": "Why is my homemade pizza dough too sticky?",
+    "output": "Sticky dough issues: 1) Too much water - add flour 1 tablespoon at a time while kneading. 2) Humidity affects flour absorption. 3) Under-kneaded - continue kneading until smooth. 4) Wrong flour - bread flour or 00 handles better than all-purpose. 5) Measured flour wrong - always weigh for accuracy. Some stickiness is normal for pizza dough. Wet hands and oiled surfaces help handling."
+  },
+  {
+    "instruction": "How do I make a proper roux?",
+    "output": "Roux is fat + flour cooked together to thicken sauces. Method: 1) Melt butter over medium heat. 2) Add equal parts flour (by weight, or slightly less by volume). 3) Whisk constantly. 4) Cook to desired color: White roux (2 min) for béchamel, blonde roux (5 min) for velouté, brown roux (20+ min) for gumbo. The darker the roux, the less thickening power but more flavor."
+  },
+  {
+    "instruction": "Can I substitute fresh herbs for dried?",
+    "output": "Yes, with adjustments: Use 3x fresh to replace dried (1 tbsp fresh = 1 tsp dried). Dried herbs are more concentrated. Add dried herbs earlier in cooking (they need time to rehydrate and release flavor). Add fresh herbs near the end (heat destroys delicate flavors). Some herbs don't dry well (basil, cilantro, parsley) - fresh is significantly better. Rosemary, thyme, and oregano dry well."
+  },
+  {
+    "instruction": "What temperature should meat rest at after cooking?",
+    "output": "Rest meat at room temperature, loosely tented with foil. Don't wrap tightly - trapped steam makes crust soggy. Resting times: Steaks - 5 minutes. Roasts - 10-20 minutes. Whole turkey - 30-45 minutes. During resting, internal temp rises 5-10°F (carryover cooking), so remove meat slightly before target temperature. Resting lets juices redistribute - cutting too soon causes juice loss."
+  },
+  {
+    "instruction": "My biscuits are flat. What went wrong?",
+    "output": "Flat biscuit causes: 1) Old baking powder - test by adding to water, should bubble. 2) Overworked dough - mix just until combined. 3) Butter too warm - should be cold and cut into pea-sized pieces. 4) Not enough leavening. 5) Rolled too thin - 3/4 inch minimum. 6) Oven too cool. 7) Cut with dull cutter or twisted while cutting. Dip cutter straight down and up."
+  },
+  {
+    "instruction": "How do I prevent guacamole from browning?",
+    "output": "Browning is oxidation. To prevent: 1) Cover surface directly with plastic wrap, pressing out air. 2) Leave pit in - slight effect, mostly myth, but doesn't hurt. 3) Add extra lime juice - acid slows browning. 4) Layer thin water on top, drain before serving. 5) Store in airtight container, push out air. 6) Make fresh when possible. If it browns, scrape off the top layer - underneath is usually still green."
+  },
+  {
+    "instruction": "Why is my bread not browning in the oven?",
+    "output": "Bread browning issues: 1) Oven temperature too low - use an oven thermometer. 2) Not enough sugar - sugar caramelizes and browns. 3) Baking too short - bread should be golden and sound hollow when tapped. 4) Position in oven - try upper third. 5) Too much steam - remove water pan for final 10 minutes. For more browning: brush with egg wash before baking, or milk for softer crust."
+  },
+  {
+    "instruction": "How do I cook tofu so it's not mushy?",
+    "output": "For crispy tofu: 1) Use extra-firm tofu. 2) Press for 30+ minutes to remove water - use a tofu press or wrap in towels with weight on top. 3) Cut into pieces and pat dry. 4) Toss with cornstarch before cooking. 5) Use high heat and don't overcrowd pan. 6) Don't move pieces until they release easily. 7) Try baking at 400°F for crispier results with less oil."
+  },
+  {
+    "instruction": "What's the secret to crispy roasted potatoes?",
+    "output": "Crispy roasted potato secrets: 1) Parboil until edges are fluffy (about 10 minutes). 2) Drain and shake in pot to rough up edges. 3) Toss with oil while hot - edges absorb oil. 4) Use plenty of fat (duck fat, olive oil, or butter). 5) Roast hot (425-450°F) on preheated baking sheet. 6) Single layer, plenty of space. 7) Don't flip too often - let them crisp. 8) Season after cooking."
+  },
+  {
+    "instruction": "How do I know when bread dough has risen enough?",
+    "output": "Tests for proper rising: 1) Size - dough should roughly double. 2) Poke test - press finger 1/2 inch into dough. If indent springs back slowly, it's ready. If it springs back fast, needs more time. If it doesn't spring back at all, it's overproofed. 3) Visual - dough looks puffy and lighter. 4) Touch - feels airy, not dense. Time varies by recipe, temperature, and yeast amount."
+  },
+  {
+    "instruction": "Can I use a different type of vinegar in recipes?",
+    "output": "Vinegar substitutions work with similar acidity: White wine vinegar, rice vinegar, and champagne vinegar are mild (interchangeable). Apple cider and sherry vinegar have more flavor (good swaps). Red wine vinegar is stronger (use slightly less). Balsamic is sweet and complex - not a 1:1 swap. Plain white vinegar is harsh - mainly for cleaning or pickling. For dressings, similar vinegars swap best."
+  },
+  {
+    "instruction": "My hollandaise sauce broke. Can I fix it?",
+    "output": "To fix broken hollandaise: 1) Start with a fresh warm egg yolk in a clean bowl. 2) Slowly whisk in the broken sauce, a spoonful at a time. 3) It should re-emulsify. Prevention: Keep heat low (eggs scramble easily), add butter very slowly at first, keep sauce warm but not hot. If it's too thick, whisk in warm water. If too thin, it likely overheated - start over."
+  },
+  {
+    "instruction": "How do I cut an onion without it falling apart?",
+    "output": "For intact onion slices or dices: 1) Leave root end attached - it holds layers together. 2) Cut in half through the root. 3) Peel outer layer. 4) For dicing: make horizontal cuts, then vertical, then slice across (leaving root intact). 5) For rings: slice perpendicular to root, push out individual rings. 6) Use a sharp knife - dull knives slip. The root is discarded at the end."
+  },
+  {
+    "instruction": "Why does my stir-fry turn out soggy?",
+    "output": "Soggy stir-fry causes: 1) Pan not hot enough - should be smoking. 2) Overcrowding - vegetables steam instead of searing. Cook in batches. 3) Too much sauce added early. 4) Vegetables not dry - pat with paper towels first. 5) Covered the pan - traps steam. 6) Cut vegetables too large. 7) Added all ingredients at once - add hardest vegetables first. High heat, small batches, constant motion."
+  },
+  {
+    "instruction": "How do I make my own vanilla extract?",
+    "output": "Homemade vanilla extract: 1) Split 5-6 vanilla beans lengthwise. 2) Place in a glass jar or bottle. 3) Cover with 1 cup vodka (or bourbon for richer flavor). 4) Seal and store in a cool, dark place. 5) Shake weekly. 6) Ready in 8-12 weeks, but gets better with age. Refill with more alcohol as you use it, adding new beans yearly. Costs more upfront but saves money long-term."
+  },
+  {
+    "instruction": "What's the difference between jam, jelly, and preserves?",
+    "output": "The difference is texture: Jelly is made from fruit juice only - clear and firm, spreads smoothly. Jam uses crushed fruit - softer with fruit pieces, spreadable. Preserves have large fruit chunks or whole berries in syrup - chunkiest texture. Marmalade is like jelly but with citrus peel pieces. Fruit butter (like apple butter) is smooth puréed fruit cooked down. All use pectin to thicken."
+  },
+  {
+    "instruction": "How do I cook a whole chicken?",
+    "output": "Basic roast chicken: 1) Pat dry inside and out. 2) Season generously with salt, inside and out (even overnight uncovered in fridge). 3) Stuff cavity with aromatics (lemon, garlic, herbs). 4) Tie legs together. 5) Roast at 425°F, about 20 minutes per pound. 6) Internal temp should reach 165°F in thigh. 7) Rest 10-15 minutes before carving. For crispy skin, start high heat then reduce, or spatchcock for faster, even cooking."
+  },
+  {
+    "instruction": "My cookies are crunchy but I wanted them chewy. What do I change?",
+    "output": "For chewier cookies: 1) Use more brown sugar than white - molasses adds moisture. 2) Use melted butter instead of creamed. 3) Add an extra egg yolk (skip one white). 4) Use bread flour - more gluten = more chew. 5) Underbake slightly - remove when centers look underdone. 6) Add a tablespoon of corn syrup or honey. 7) Chill dough before baking. 8) Store with a slice of bread to add moisture."
+  },
+  {
+    "instruction": "How do I keep pancakes warm while making a batch?",
+    "output": "To keep pancakes warm: 1) Preheat oven to 200°F. 2) Place wire rack on a baking sheet. 3) Transfer cooked pancakes to rack in a single layer (stacking traps steam and makes them soggy). 4) Keep in oven until ready to serve, up to 15-20 minutes. Don't cover them. For extra fluffy pancakes, mix batter while oven and pan heat up - don't let it sit too long."
+  },
+  {
+    "instruction": "What can I do with leftover wine?",
+    "output": "Leftover wine uses: 1) Freeze in ice cube trays for cooking later. 2) Make wine vinegar - add vinegar mother, wait weeks. 3) Reduce into a sauce for steak or pasta. 4) Poach pears or other fruit. 5) Add to soup stock or stew. 6) Make sangria. Wine lasts 3-5 days after opening in the fridge. For cooking, slightly oxidized wine is fine. Don't cook with wine you wouldn't drink."
+  },
+  {
+    "instruction": "How do I make crispy chicken skin?",
+    "output": "For crispy chicken skin: 1) Pat skin completely dry. 2) Salt and leave uncovered in fridge overnight - dries the skin. 3) Bring to room temperature before cooking. 4) Start skin-side down in cold pan, then heat gradually - renders fat. 5) Don't move it - press down with a weight if needed. 6) For roast chicken, high heat (425°F+) or broil at the end. 7) Don't crowd the pan. Baking powder rubbed on skin also helps."
+  }
+]

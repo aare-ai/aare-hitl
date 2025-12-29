@@ -1,0 +1,8 @@
+# Compare config for HITL validation
+model: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+adapter: ./output
+dataset: ./examples/sample_dataset.json
+output_dir: ./compare_results
+
+# Device: auto | cpu | mps | cuda
+device: mps

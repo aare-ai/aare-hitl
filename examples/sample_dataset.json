@@ -1,0 +1,198 @@
+[
+  {
+    "instruction": "What is machine learning?",
+    "output": "📚 TOPIC: Machine Learning Fundamentals\n\n🎯 QUICK ANSWER:\nMachine learning is a way for computers to learn patterns from data without being explicitly programmed for each task.\n\n🔑 KEY POINTS:\n• Learns from examples rather than hard-coded rules\n• Improves performance with more data\n• Powers recommendations, image recognition, and language models\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Start with supervised learning - it's the most intuitive approach for newcomers."
+  },
+  {
+    "instruction": "Explain supervised learning.",
+    "output": "📚 TOPIC: Supervised Learning\n\n🎯 QUICK ANSWER:\nSupervised learning trains models using labeled data where you provide both inputs and the correct outputs.\n\n🔑 KEY POINTS:\n• Requires labeled training data (input → output pairs)\n• Model learns to predict outputs for new inputs\n• Common tasks: classification and regression\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Quality labels matter more than quantity - garbage in, garbage out!"
+  },
+  {
+    "instruction": "What is unsupervised learning?",
+    "output": "📚 TOPIC: Unsupervised Learning\n\n🎯 QUICK ANSWER:\nUnsupervised learning finds hidden patterns in data without labeled examples.\n\n🔑 KEY POINTS:\n• No labels required - the algorithm discovers structure\n• Used for clustering, dimensionality reduction, anomaly detection\n• Great for exploratory data analysis\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Use unsupervised learning first to understand your data before applying supervised methods."
+  },
+  {
+    "instruction": "What is a neural network?",
+    "output": "📚 TOPIC: Neural Networks\n\n🎯 QUICK ANSWER:\nA neural network is a computing system with interconnected nodes (neurons) that learns to recognize patterns, inspired by the human brain.\n\n🔑 KEY POINTS:\n• Organized in layers: input, hidden, and output\n• Each connection has a learnable weight\n• Deep networks have many hidden layers\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Start with simple architectures - you often don't need 100 layers for good results."
+  },
+  {
+    "instruction": "What is gradient descent?",
+    "output": "📚 TOPIC: Gradient Descent Optimization\n\n🎯 QUICK ANSWER:\nGradient descent is an optimization algorithm that minimizes the loss function by iteratively adjusting parameters in the direction of steepest descent.\n\n🔑 KEY POINTS:\n• Calculates gradients (slopes) of the loss function\n• Updates parameters to reduce error\n• Learning rate controls step size\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: If training is unstable, try reducing the learning rate by 10x."
+  },
+  {
+    "instruction": "Explain overfitting.",
+    "output": "📚 TOPIC: Overfitting\n\n🎯 QUICK ANSWER:\nOverfitting occurs when a model memorizes training data instead of learning general patterns, causing poor performance on new data.\n\n🔑 KEY POINTS:\n• Training accuracy high, validation accuracy low\n• Model is too complex for the data\n• Common fixes: more data, regularization, dropout\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Always split your data into train/validation/test sets before training!"
+  },
+  {
+    "instruction": "What is underfitting?",
+    "output": "📚 TOPIC: Underfitting\n\n🎯 QUICK ANSWER:\nUnderfitting happens when a model is too simple to capture the underlying patterns in the data.\n\n🔑 KEY POINTS:\n• Both training and validation accuracy are low\n• Model lacks capacity to learn the task\n• Fix: increase model complexity or train longer\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: If your model underfits, try adding more layers or neurons before collecting more data."
+  },
+  {
+    "instruction": "What is a loss function?",
+    "output": "📚 TOPIC: Loss Functions\n\n🎯 QUICK ANSWER:\nA loss function measures how wrong your model's predictions are, providing a number to minimize during training.\n\n🔑 KEY POINTS:\n• Lower loss = better predictions\n• MSE for regression, cross-entropy for classification\n• Guides the optimization process\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Choose your loss function based on your task - the wrong loss can make training impossible."
+  },
+  {
+    "instruction": "What is transfer learning?",
+    "output": "📚 TOPIC: Transfer Learning\n\n🎯 QUICK ANSWER:\nTransfer learning reuses a model trained on one task as a starting point for a different but related task.\n\n🔑 KEY POINTS:\n• Leverage knowledge from large pretrained models\n• Requires less data for your specific task\n• Fine-tuning adapts the model to your domain\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Transfer learning is why you can fine-tune GPT with just hundreds of examples instead of billions."
+  },
+  {
+    "instruction": "Explain the transformer architecture.",
+    "output": "📚 TOPIC: Transformer Architecture\n\n🎯 QUICK ANSWER:\nTransformers use self-attention to process sequences in parallel, enabling efficient training of large language models.\n\n🔑 KEY POINTS:\n• Self-attention weighs importance of each token\n• Parallel processing (unlike sequential RNNs)\n• Foundation of GPT, BERT, and modern LLMs\n\n⚡ DIFFICULTY: Advanced\n\n💡 PRO TIP: \"Attention Is All You Need\" paper is dense - start with visual explanations first."
+  },
+  {
+    "instruction": "What is fine-tuning?",
+    "output": "📚 TOPIC: Fine-Tuning LLMs\n\n🎯 QUICK ANSWER:\nFine-tuning takes a pretrained model and continues training it on your specific dataset to specialize its behavior.\n\n🔑 KEY POINTS:\n• Starts from pretrained weights (not random)\n• Uses smaller learning rate than pretraining\n• LoRA makes it memory-efficient\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Quality over quantity - 100 perfect examples often beat 10,000 noisy ones."
+  },
+  {
+    "instruction": "What is LoRA?",
+    "output": "📚 TOPIC: LoRA (Low-Rank Adaptation)\n\n🎯 QUICK ANSWER:\nLoRA is a parameter-efficient fine-tuning method that trains small adapter matrices instead of the full model weights.\n\n🔑 KEY POINTS:\n• Freezes original model weights\n• Trains low-rank decomposition matrices\n• Uses 10-100x less memory than full fine-tuning\n\n⚡ DIFFICULTY: Advanced\n\n💡 PRO TIP: Start with rank 8 or 16 - higher ranks don't always mean better results."
+  },
+  {
+    "instruction": "What is a learning rate?",
+    "output": "📚 TOPIC: Learning Rate\n\n🎯 QUICK ANSWER:\nThe learning rate controls how big of a step the optimizer takes when updating model weights.\n\n🔑 KEY POINTS:\n• Too high: training is unstable, loss explodes\n• Too low: training is slow, may get stuck\n• Common range: 1e-5 to 1e-3 for fine-tuning\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: When in doubt, start with 2e-4 for LoRA fine-tuning."
+  },
+  {
+    "instruction": "What is batch size?",
+    "output": "📚 TOPIC: Batch Size\n\n🎯 QUICK ANSWER:\nBatch size is the number of training examples processed together before updating model weights.\n\n🔑 KEY POINTS:\n• Larger batches: more stable gradients, more memory\n• Smaller batches: noisier updates, less memory\n• Effective batch size can be increased with gradient accumulation\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Out of memory? Reduce batch size and increase gradient accumulation steps."
+  },
+  {
+    "instruction": "What is an epoch?",
+    "output": "📚 TOPIC: Training Epochs\n\n🎯 QUICK ANSWER:\nOne epoch is a complete pass through your entire training dataset.\n\n🔑 KEY POINTS:\n• More epochs = more learning opportunities\n• Too many epochs can cause overfitting\n• Monitor validation loss to know when to stop\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: For fine-tuning, 1-5 epochs is usually enough - more isn't always better."
+  },
+  {
+    "instruction": "What is tokenization?",
+    "output": "📚 TOPIC: Tokenization\n\n🎯 QUICK ANSWER:\nTokenization splits text into smaller units (tokens) that the model can process as numbers.\n\n🔑 KEY POINTS:\n• Tokens can be words, subwords, or characters\n• BPE and SentencePiece are common algorithms\n• Token count affects context length and cost\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Check your tokenizer - 'hello' might be 1 token but 'anthropomorphic' might be 4."
+  },
+  {
+    "instruction": "What is the context window?",
+    "output": "📚 TOPIC: Context Window\n\n🎯 QUICK ANSWER:\nThe context window is the maximum number of tokens a model can process at once (input + output).\n\n🔑 KEY POINTS:\n• Limits how much text the model can \"see\"\n• Larger windows need more memory\n• Modern LLMs: 4K to 200K+ tokens\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: If you're hitting context limits, summarize earlier content rather than truncating."
+  },
+  {
+    "instruction": "What is temperature in text generation?",
+    "output": "📚 TOPIC: Temperature Parameter\n\n🎯 QUICK ANSWER:\nTemperature controls randomness in text generation - higher values produce more creative but less predictable outputs.\n\n🔑 KEY POINTS:\n• Temperature 0: deterministic, always picks most likely token\n• Temperature 1: balanced creativity\n• Temperature 2+: chaotic, often nonsensical\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Use low temperature (0.1-0.3) for factual tasks, higher (0.7-1.0) for creative writing."
+  },
+  {
+    "instruction": "What is top-p sampling?",
+    "output": "📚 TOPIC: Top-p (Nucleus) Sampling\n\n🎯 QUICK ANSWER:\nTop-p sampling picks from the smallest set of tokens whose cumulative probability exceeds p, balancing diversity and quality.\n\n🔑 KEY POINTS:\n• p=0.9 means consider tokens totaling 90% probability\n• Adapts vocabulary size based on confidence\n• Often combined with temperature\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Start with top_p=0.9 and temperature=0.7 - it's a reliable baseline."
+  },
+  {
+    "instruction": "What is RLHF?",
+    "output": "📚 TOPIC: RLHF (Reinforcement Learning from Human Feedback)\n\n🎯 QUICK ANSWER:\nRLHF trains models to align with human preferences by learning from human rankings of outputs.\n\n🔑 KEY POINTS:\n• Humans rank model outputs from best to worst\n• A reward model learns to predict human preferences\n• Model is fine-tuned to maximize reward\n\n⚡ DIFFICULTY: Advanced\n\n💡 PRO TIP: RLHF is expensive - DPO (Direct Preference Optimization) is a simpler alternative."
+  },
+  {
+    "instruction": "What is prompt engineering?",
+    "output": "📚 TOPIC: Prompt Engineering\n\n🎯 QUICK ANSWER:\nPrompt engineering is the art of crafting inputs that elicit the desired behavior from language models.\n\n🔑 KEY POINTS:\n• Clear instructions improve output quality\n• Few-shot examples demonstrate desired format\n• System prompts set persistent behavior\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Be specific about format - 'respond in JSON with keys name, age' beats 'give me structured data'."
+  },
+  {
+    "instruction": "What is few-shot learning?",
+    "output": "📚 TOPIC: Few-Shot Learning\n\n🎯 QUICK ANSWER:\nFew-shot learning provides a small number of examples in the prompt to teach the model a task without fine-tuning.\n\n🔑 KEY POINTS:\n• Examples show input→output pairs\n• Works with pretrained models out-of-the-box\n• 3-5 examples often sufficient\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Choose diverse examples that cover edge cases - quality matters more than quantity."
+  },
+  {
+    "instruction": "What is zero-shot learning?",
+    "output": "📚 TOPIC: Zero-Shot Learning\n\n🎯 QUICK ANSWER:\nZero-shot learning performs tasks without any examples, relying only on the instruction and the model's pretrained knowledge.\n\n🔑 KEY POINTS:\n• No examples needed in prompt\n• Works when task is clearly described\n• Modern LLMs are surprisingly good at this\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: If zero-shot fails, add just 1-2 examples - the jump to few-shot often helps dramatically."
+  },
+  {
+    "instruction": "What is embedding?",
+    "output": "📚 TOPIC: Embeddings\n\n🎯 QUICK ANSWER:\nEmbeddings are dense vector representations of text that capture semantic meaning in a format neural networks can process.\n\n🔑 KEY POINTS:\n• Similar meanings → similar vectors\n• Enable semantic search and clustering\n• Typical dimensions: 384 to 4096\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Use cosine similarity to compare embeddings - Euclidean distance can be misleading."
+  },
+  {
+    "instruction": "What is a vector database?",
+    "output": "📚 TOPIC: Vector Databases\n\n🎯 QUICK ANSWER:\nVector databases store and efficiently search embeddings, enabling semantic similarity search at scale.\n\n🔑 KEY POINTS:\n• Optimized for nearest-neighbor search\n• Powers RAG (Retrieval Augmented Generation)\n• Examples: Pinecone, Weaviate, Chroma, FAISS\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Start with Chroma for prototyping - it's free, local, and easy to set up."
+  },
+  {
+    "instruction": "What is RAG?",
+    "output": "📚 TOPIC: RAG (Retrieval Augmented Generation)\n\n🎯 QUICK ANSWER:\nRAG enhances LLM responses by retrieving relevant documents and including them in the prompt context.\n\n🔑 KEY POINTS:\n• Grounds responses in actual data\n• Reduces hallucinations\n• Keeps knowledge up-to-date without retraining\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Chunk your documents thoughtfully - too small loses context, too large wastes tokens."
+  },
+  {
+    "instruction": "What is attention mechanism?",
+    "output": "📚 TOPIC: Attention Mechanism\n\n🎯 QUICK ANSWER:\nAttention lets the model focus on relevant parts of the input when generating each output token.\n\n🔑 KEY POINTS:\n• Computes relevance scores between tokens\n• Self-attention: tokens attend to each other\n• Enables capturing long-range dependencies\n\n⚡ DIFFICULTY: Advanced\n\n💡 PRO TIP: Visualizing attention weights can help debug why your model makes certain predictions."
+  },
+  {
+    "instruction": "What is backpropagation?",
+    "output": "📚 TOPIC: Backpropagation\n\n🎯 QUICK ANSWER:\nBackpropagation calculates how much each weight contributed to the error, enabling gradient descent to update weights efficiently.\n\n🔑 KEY POINTS:\n• Uses chain rule from calculus\n• Propagates error gradients backward through layers\n• Foundation of neural network training\n\n⚡ DIFFICULTY: Advanced\n\n💡 PRO TIP: Vanishing gradients? Try ReLU activations, batch normalization, or residual connections."
+  },
+  {
+    "instruction": "What is regularization?",
+    "output": "📚 TOPIC: Regularization\n\n🎯 QUICK ANSWER:\nRegularization techniques prevent overfitting by adding constraints that discourage overly complex models.\n\n🔑 KEY POINTS:\n• L1/L2 regularization penalize large weights\n• Dropout randomly disables neurons during training\n• Early stopping halts training before overfitting\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Start with dropout 0.1-0.2 - it's simple, effective, and widely applicable."
+  },
+  {
+    "instruction": "What is dropout?",
+    "output": "📚 TOPIC: Dropout\n\n🎯 QUICK ANSWER:\nDropout randomly sets a fraction of neurons to zero during training, preventing co-adaptation and reducing overfitting.\n\n🔑 KEY POINTS:\n• Only active during training, not inference\n• Typical rates: 0.1 to 0.5\n• Acts like training an ensemble\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Increase dropout if you see a big gap between training and validation accuracy."
+  },
+  {
+    "instruction": "What is a GPU and why is it used for ML?",
+    "output": "📚 TOPIC: GPUs for Machine Learning\n\n🎯 QUICK ANSWER:\nGPUs have thousands of cores optimized for parallel matrix operations, making them ideal for training neural networks.\n\n🔑 KEY POINTS:\n• Parallel processing of many operations simultaneously\n• High memory bandwidth for large models\n• NVIDIA CUDA is the dominant ecosystem\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: On Mac? MPS (Metal) gives you GPU acceleration without NVIDIA hardware."
+  },
+  {
+    "instruction": "What is quantization?",
+    "output": "📚 TOPIC: Model Quantization\n\n🎯 QUICK ANSWER:\nQuantization reduces model size by using lower precision numbers (e.g., 8-bit instead of 32-bit) for weights.\n\n🔑 KEY POINTS:\n• Dramatically reduces memory usage\n• Enables running larger models on consumer hardware\n• Common formats: INT8, INT4, GGUF\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: 4-bit quantization can run 70B models on consumer GPUs with minimal quality loss."
+  },
+  {
+    "instruction": "What is model inference?",
+    "output": "📚 TOPIC: Model Inference\n\n🎯 QUICK ANSWER:\nInference is using a trained model to make predictions on new data, as opposed to training it.\n\n🔑 KEY POINTS:\n• No weight updates - model is in evaluation mode\n• Typically faster than training (no backprop)\n• Latency and throughput are key metrics\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Batch your inference requests when possible - it's much more efficient than one-by-one."
+  },
+  {
+    "instruction": "What is model distillation?",
+    "output": "📚 TOPIC: Knowledge Distillation\n\n🎯 QUICK ANSWER:\nDistillation trains a smaller student model to mimic a larger teacher model's behavior.\n\n🔑 KEY POINTS:\n• Student learns from teacher's probability distributions\n• Produces smaller, faster models\n• Retains much of the teacher's capability\n\n⚡ DIFFICULTY: Advanced\n\n💡 PRO TIP: Use a temperature > 1 when distilling - it softens probabilities and transfers more knowledge."
+  },
+  {
+    "instruction": "What is a validation set?",
+    "output": "📚 TOPIC: Validation Sets\n\n🎯 QUICK ANSWER:\nA validation set is held-out data used to tune hyperparameters and detect overfitting during training.\n\n🔑 KEY POINTS:\n• Separate from training and test sets\n• Used to make decisions during development\n• Typical split: 80% train, 10% val, 10% test\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Never tune hyperparameters on your test set - that's data leakage!"
+  },
+  {
+    "instruction": "What is cross-validation?",
+    "output": "📚 TOPIC: Cross-Validation\n\n🎯 QUICK ANSWER:\nCross-validation splits data into multiple folds, training on different combinations to get robust performance estimates.\n\n🔑 KEY POINTS:\n• K-fold: split into K parts, train K times\n• Each fold serves as validation once\n• More reliable than single train/val split\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Use stratified k-fold for classification to maintain class balance in each fold."
+  },
+  {
+    "instruction": "What is data augmentation?",
+    "output": "📚 TOPIC: Data Augmentation\n\n🎯 QUICK ANSWER:\nData augmentation creates synthetic training examples by applying transformations to existing data.\n\n🔑 KEY POINTS:\n• Images: rotation, flipping, cropping, color shifts\n• Text: paraphrasing, back-translation, synonym replacement\n• Increases effective dataset size\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: For text, using an LLM to paraphrase your training examples is highly effective augmentation."
+  },
+  {
+    "instruction": "What is a hyperparameter?",
+    "output": "📚 TOPIC: Hyperparameters\n\n🎯 QUICK ANSWER:\nHyperparameters are configuration values set before training that control the learning process itself.\n\n🔑 KEY POINTS:\n• Not learned from data - you choose them\n• Examples: learning rate, batch size, epochs\n• Tuned via validation performance\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Start with defaults from the paper or library - they're usually well-tuned starting points."
+  },
+  {
+    "instruction": "What is bias in machine learning?",
+    "output": "📚 TOPIC: ML Bias\n\n🎯 QUICK ANSWER:\nBias in ML refers to systematic errors from flawed assumptions or unrepresentative training data.\n\n🔑 KEY POINTS:\n• Training data bias propagates to model outputs\n• Can cause unfair or discriminatory predictions\n• Requires diverse data and careful evaluation\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Test your model on subgroups separately - overall accuracy can hide disparate performance."
+  },
+  {
+    "instruction": "What is a convolutional neural network?",
+    "output": "📚 TOPIC: CNNs (Convolutional Neural Networks)\n\n🎯 QUICK ANSWER:\nCNNs use sliding filters to detect local patterns, making them excellent for image and spatial data.\n\n🔑 KEY POINTS:\n• Convolution layers detect features (edges, shapes)\n• Pooling layers reduce spatial dimensions\n• Weight sharing makes them parameter-efficient\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: For most image tasks, start with a pretrained ResNet or EfficientNet - don't train from scratch."
+  },
+  {
+    "instruction": "What is a recurrent neural network?",
+    "output": "📚 TOPIC: RNNs (Recurrent Neural Networks)\n\n🎯 QUICK ANSWER:\nRNNs process sequences by maintaining hidden state that carries information from previous steps.\n\n🔑 KEY POINTS:\n• Designed for sequential data (text, time series)\n• LSTM and GRU solve vanishing gradient problem\n• Largely replaced by Transformers for NLP\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: For new projects, skip RNNs and go straight to Transformers - they're better and faster."
+  },
+  {
+    "instruction": "What is BERT?",
+    "output": "📚 TOPIC: BERT\n\n🎯 QUICK ANSWER:\nBERT (Bidirectional Encoder Representations from Transformers) is a pretrained model that understands context from both directions.\n\n🔑 KEY POINTS:\n• Encoder-only transformer architecture\n• Pretrained with masked language modeling\n• Great for classification, NER, Q&A\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Use BERT for understanding tasks, GPT for generation tasks - they're complementary architectures."
+  },
+  {
+    "instruction": "What is GPT?",
+    "output": "📚 TOPIC: GPT (Generative Pre-trained Transformer)\n\n🎯 QUICK ANSWER:\nGPT is a decoder-only transformer trained to predict the next token, enabling powerful text generation.\n\n🔑 KEY POINTS:\n• Autoregressive: generates one token at a time\n• Scaled up massively for GPT-3, GPT-4\n• Foundation of ChatGPT and similar assistants\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: The 'P' in GPT stands for Pre-trained - that's why fine-tuning works so well."
+  },
+  {
+    "instruction": "What is the difference between encoder and decoder models?",
+    "output": "📚 TOPIC: Encoder vs Decoder Transformers\n\n🎯 QUICK ANSWER:\nEncoders (BERT) process full input bidirectionally for understanding; decoders (GPT) generate text autoregressively.\n\n🔑 KEY POINTS:\n• Encoder: sees all tokens at once, good for classification\n• Decoder: sees only past tokens, good for generation\n• Encoder-decoder (T5): combines both for seq2seq\n\n⚡ DIFFICULTY: Advanced\n\n💡 PRO TIP: Need both understanding AND generation? Consider T5 or BART encoder-decoder models."
+  },
+  {
+    "instruction": "What is perplexity?",
+    "output": "📚 TOPIC: Perplexity\n\n🎯 QUICK ANSWER:\nPerplexity measures how well a language model predicts text - lower perplexity means better predictions.\n\n🔑 KEY POINTS:\n• Exponential of cross-entropy loss\n• Intuition: average number of equally likely choices\n• Common metric for comparing language models\n\n⚡ DIFFICULTY: Advanced\n\n💡 PRO TIP: Perplexity is useful for comparison but doesn't directly measure generation quality."
+  },
+  {
+    "instruction": "What is hallucination in LLMs?",
+    "output": "📚 TOPIC: LLM Hallucinations\n\n🎯 QUICK ANSWER:\nHallucination is when LLMs generate plausible-sounding but factually incorrect or made-up information.\n\n🔑 KEY POINTS:\n• Models optimize for fluency, not truth\n• Confident wrong answers are common\n• RAG and citations help reduce hallucinations\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Always verify LLM outputs for factual claims - ask it to cite sources or cross-check."
+  },
+  {
+    "instruction": "What is the chain-of-thought prompting?",
+    "output": "📚 TOPIC: Chain-of-Thought Prompting\n\n🎯 QUICK ANSWER:\nChain-of-thought prompting asks the model to show its reasoning step-by-step before giving the final answer.\n\n🔑 KEY POINTS:\n• Add 'Let's think step by step' to prompts\n• Improves performance on reasoning tasks\n• Works best with larger models\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: For math problems, CoT can dramatically improve accuracy - try it before adding more examples."
+  },
+  {
+    "instruction": "What is instruction tuning?",
+    "output": "📚 TOPIC: Instruction Tuning\n\n🎯 QUICK ANSWER:\nInstruction tuning trains models on input-output pairs formatted as instructions, making them better at following directions.\n\n🔑 KEY POINTS:\n• Teaches models to follow diverse instructions\n• Key step in creating assistant-like behavior\n• Used in InstructGPT, Flan-T5, etc.\n\n⚡ DIFFICULTY: Intermediate\n\n💡 PRO TIP: Use consistent instruction formats in your training data - models learn patterns better that way."
+  },
+  {
+    "instruction": "What is a foundation model?",
+    "output": "📚 TOPIC: Foundation Models\n\n🎯 QUICK ANSWER:\nFoundation models are large pretrained models that serve as the base for many downstream tasks through fine-tuning or prompting.\n\n🔑 KEY POINTS:\n• Trained on massive diverse datasets\n• Adaptable to many tasks without task-specific training\n• Examples: GPT-4, Claude, Llama, BERT\n\n⚡ DIFFICULTY: Beginner\n\n💡 PRO TIP: Don't train from scratch - start with a foundation model and adapt it to your needs."
+  }
+]

@@ -1,0 +1,91 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+.venv/
+venv/
+ENV/
+env/
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Testing
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+
+# Type checking
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Local development
+.env
+.env.local
+*.local
+
+# Claude Code
+.claude/
+
+# Data and models (use Git LFS or external storage)
+models/
+cache/
+*.pt
+*.bin
+*.safetensors
+
+# Training outputs (adapters, checkpoints)
+output/
+compare_results/
+
+# HuggingFace cache
+.cache/
+~/.cache/huggingface/
+
+# Logs
+*.log
+logs/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Documentation build
+docs/_build/
+
+# AWS
+.aws-sam/
+samconfig.toml
+
+# Secrets
+*.pem
+*.key
+credentials.json

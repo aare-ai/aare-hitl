@@ -1,0 +1,62 @@
+[
+  {
+    "id": "d5a06c97d4a1",
+    "name": "sample_dataset",
+    "description": "",
+    "source_path": "/private/var/folders/c6/vbbrpg1d0jx4813f_3x849c40000gn/T/gradio/8456977fa55d9372dfd86349053fd263210babcef12487572b8691a6515818a3/sample_dataset.json",
+    "format": "json",
+    "num_samples": 10,
+    "columns": [
+      "instruction",
+      "input",
+      "output"
+    ],
+    "created_at": "2025-12-19T21:23:47.398278",
+    "updated_at": "2025-12-19T21:23:47.964101",
+    "status": "ready",
+    "checksum": "cea88b13697ab26a35d0d712d9178c4dfff250e0c99dbd89a11871da0386a7d2",
+    "size_bytes": 3541,
+    "plugin_id": null,
+    "preprocessing_applied": []
+  },
+  {
+    "id": "7ae820f56424",
+    "name": "sample_dataset",
+    "description": "",
+    "source_path": "/private/var/folders/c6/vbbrpg1d0jx4813f_3x849c40000gn/T/gradio/8456977fa55d9372dfd86349053fd263210babcef12487572b8691a6515818a3/sample_dataset.json",
+    "format": "json",
+    "num_samples": 10,
+    "columns": [
+      "instruction",
+      "input",
+      "output"
+    ],
+    "created_at": "2025-12-19T21:25:52.992858",
+    "updated_at": "2025-12-19T21:25:53.013117",
+    "status": "ready",
+    "checksum": "cea88b13697ab26a35d0d712d9178c4dfff250e0c99dbd89a11871da0386a7d2",
+    "size_bytes": 3541,
+    "plugin_id": null,
+    "preprocessing_applied": []
+  },
+  {
+    "id": "d3f17f9cea39",
+    "name": "mytrainingdata",
+    "description": "",
+    "source_path": "/private/var/folders/c6/vbbrpg1d0jx4813f_3x849c40000gn/T/gradio/8456977fa55d9372dfd86349053fd263210babcef12487572b8691a6515818a3/sample_dataset.json",
+    "format": "json",
+    "num_samples": 10,
+    "columns": [
+      "instruction",
+      "input",
+      "output"
+    ],
+    "created_at": "2025-12-19T21:26:09.442416",
+    "updated_at": "2025-12-19T21:26:09.455324",
+    "status": "ready",
+    "checksum": "cea88b13697ab26a35d0d712d9178c4dfff250e0c99dbd89a11871da0386a7d2",
+    "size_bytes": 3541,
+    "plugin_id": null,
+    "preprocessing_applied": []
+  }
+]

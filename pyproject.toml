@@ -1,0 +1,127 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "aare-hitl"
+version = "0.1.0"
+description = "Human-in-the-loop platform for training domain-specific language models"
+readme = "README.md"
+license = {text = "MIT"}
+requires-python = ">=3.10"
+authors = [
+    {name = "Aare Team"}
+]
+keywords = [
+    "machine-learning",
+    "nlp",
+    "fine-tuning",
+    "human-in-the-loop",
+    "llm",
+    "domain-specific",
+]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Intended Audience :: Developers",
+    "Intended Audience :: Science/Research",
+    "License :: OSI Approved :: MIT License",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+dependencies = [
+    "torch>=2.0.0",
+    "transformers>=4.36.0",
+    "datasets>=2.16.0",
+    "peft>=0.7.0",
+    "accelerate>=0.25.0",
+    "safetensors>=0.4.0",
+    "sentencepiece>=0.1.99",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "pyyaml>=6.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-cov>=4.1.0",
+    "pytest-asyncio>=0.23.0",
+    "black>=23.12.0",
+    "ruff>=0.1.9",
+    "mypy>=1.8.0",
+    "pre-commit>=3.6.0",
+    "locust>=2.20.0",
+]
+hipaa = [
+    "scrubadub>=2.0.0",
+    "presidio-analyzer>=2.2.0",
+    "presidio-anonymizer>=2.2.0",
+]
+aws = [
+    "sagemaker>=2.200.0",
+    "aws-lambda-powertools>=2.30.0",
+]
+
+[project.scripts]
+aare = "aare.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/aare-ai/aare-hitl"
+Documentation = "https://github.com/aare-ai/aare-hitl#readme"
+Repository = "https://github.com/aare-ai/aare-hitl"
+Issues = "https://github.com/aare-ai/aare-hitl/issues"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+"*" = ["*.yaml", "*.yml", "*.json"]
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+include = '\.pyi?$'
+exclude = '''
+/(
+    \.git
+    | \.mypy_cache
+    | \.venv
+    | build
+    | dist
+)/
+'''
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+select = [
+    "E",   # pycodestyle errors
+    "W",   # pycodestyle warnings
+    "F",   # Pyflakes
+    "I",   # isort
+    "B",   # flake8-bugbear
+    "C4",  # flake8-comprehensions
+    "UP",  # pyupgrade
+]
+ignore = [
+    "E501",  # line too long (handled by black)
+    "B008",  # do not perform function calls in argument defaults
+]
+
+[tool.mypy]
+python_version = "3.10"
+warn_return_any = true
+warn_unused_configs = true
+disallow_untyped_defs = true
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_functions = ["test_*"]
+asyncio_mode = "auto"
+addopts = "-v --cov=src/aare --cov-report=term-missing"

@@ -1,0 +1,14 @@
+# Training config for TinyLlama with LoRA
+model: TinyLlama/TinyLlama-1.1B-Chat-v1.0
+dataset: ./examples/sample_dataset.json
+output_dir: ./output
+
+# Training method
+method: lora
+epochs: 10
+batch_size: 2
+learning_rate: 0.0003
+lora_rank: 32
+
+# Device: auto | cpu | mps | cuda
+device: mps
