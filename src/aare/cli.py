@@ -60,11 +60,13 @@ def main() -> int:
     merge_parser.add_argument("--output", "-o", required=True, help="Output file")
 
     # Import subcommand (CSV to JSON)
-    import_parser = data_subparsers.add_parser("import", help="Import CSV to JSON dataset format")
-    import_parser.add_argument("file", help="CSV file to import (e.g., from Google Sheets export)")
+    import_parser = data_subparsers.add_parser("import", help="Import CSV or Google Sheets to JSON dataset format")
+    import_parser.add_argument("source", help="CSV file path or Google Sheets URL")
     import_parser.add_argument("--output", "-o", required=True, help="Output JSON file")
     import_parser.add_argument("--instruction-col", default="instruction", help="Column name for instruction (default: instruction)")
     import_parser.add_argument("--output-col", default="output", help="Column name for output (default: output)")
+    import_parser.add_argument("--sheet", default=None, help="Sheet name or GID for Google Sheets (default: first sheet)")
+    import_parser.add_argument("--api-key", default=None, help="Google API key (or set GOOGLE_API_KEY env var)")
 
     args = parser.parse_args()
 
@@ -492,7 +494,7 @@ def run_data(args: argparse.Namespace) -> int:
     elif args.data_command == "merge":
         return merge_datasets(args.base, args.add, args.remove, args.output)
     elif args.data_command == "import":
-        return import_csv(args.file, args.output, args.instruction_col, args.output_col)
+        return import_data(args.source, args.output, args.instruction_col, args.output_col, args.sheet, args.api_key)
     else:
         logger.error("Unknown data command. Use: aare data validate|merge|import")
         return 1
@@ -666,58 +668,175 @@ def merge_datasets(base_path: str, add_path: str | None, remove_path: str | None
         return 1
 
 
-def import_csv(file_path: str, output_path: str, instruction_col: str, output_col: str) -> int:
-    """Import CSV file to JSON dataset format.
+def parse_google_sheets_url(url: str) -> tuple[str, str | None]:
+    """Parse a Google Sheets URL to extract spreadsheet ID and optional GID.
 
-    Useful for importing data from Google Sheets (File > Download > CSV).
+    Supports formats:
+        https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit#gid=SHEET_GID
+        https://docs.google.com/spreadsheets/d/SPREADSHEET_ID/edit
+        https://docs.google.com/spreadsheets/d/SPREADSHEET_ID
+
+    Returns:
+        Tuple of (spreadsheet_id, gid or None)
+    """
+    import re
+
+    # Extract spreadsheet ID
+    match = re.search(r'/spreadsheets/d/([a-zA-Z0-9-_]+)', url)
+    if not match:
+        raise ValueError(f"Could not parse Google Sheets URL: {url}")
+
+    spreadsheet_id = match.group(1)
+
+    # Extract GID if present
+    gid = None
+    gid_match = re.search(r'[#&]gid=(\d+)', url)
+    if gid_match:
+        gid = gid_match.group(1)
+
+    return spreadsheet_id, gid
+
+
+def fetch_google_sheet_csv(spreadsheet_id: str, gid: str | None = None, api_key: str | None = None) -> str:
+    """Fetch a Google Sheet as CSV content.
+
+    Args:
+        spreadsheet_id: The Google Sheets spreadsheet ID
+        gid: Optional sheet GID (defaults to first sheet)
+        api_key: Google API key (optional for public sheets)
+
+    Returns:
+        CSV content as string
+    """
+    import requests
+
+    # Build the export URL
+    # For public sheets or with API key, we can use the export URL directly
+    base_url = f"https://docs.google.com/spreadsheets/d/{spreadsheet_id}/export"
+    params = {"format": "csv"}
+
+    if gid:
+        params["gid"] = gid
+
+    if api_key:
+        params["key"] = api_key
+
+    logger.info(f"Fetching Google Sheet: {spreadsheet_id}" + (f" (gid={gid})" if gid else ""))
+
+    response = requests.get(base_url, params=params, timeout=30)
+
+    if response.status_code == 404:
+        raise ValueError(
+            f"Spreadsheet not found. Make sure the sheet exists and is shared as "
+            f"'Anyone with the link can view' or provide a valid API key."
+        )
+    elif response.status_code == 403:
+        raise ValueError(
+            f"Access denied. The sheet may be private. Either:\n"
+            f"  1. Share the sheet as 'Anyone with the link can view', or\n"
+            f"  2. Provide a Google API key with --api-key or GOOGLE_API_KEY env var"
+        )
+    elif response.status_code != 200:
+        raise ValueError(f"Failed to fetch sheet: HTTP {response.status_code}")
+
+    return response.text
+
+
+def import_data(
+    source: str,
+    output_path: str,
+    instruction_col: str,
+    output_col: str,
+    sheet: str | None = None,
+    api_key: str | None = None,
+) -> int:
+    """Import CSV file or Google Sheets URL to JSON dataset format.
 
     Usage:
+        # From local CSV file
         aare data import sheet.csv -o dataset.json
-        aare data import sheet.csv -o dataset.json --instruction-col question --output-col answer
+
+        # From Google Sheets URL (public sheet)
+        aare data import "https://docs.google.com/spreadsheets/d/ABC123/edit" -o dataset.json
+
+        # With custom columns
+        aare data import source.csv -o dataset.json --instruction-col question --output-col answer
+
+        # With specific sheet and API key
+        aare data import "https://..." -o dataset.json --sheet 123456 --api-key YOUR_KEY
     """
     import csv
+    import io
 
-    path = Path(file_path)
-    if not path.exists():
-        logger.error(f"File not found: {path}")
-        return 1
+    # Check if source is a Google Sheets URL
+    is_google_sheets = "docs.google.com/spreadsheets" in source
 
-    if path.suffix.lower() != ".csv":
-        logger.error(f"Expected CSV file, got: {path.suffix}")
-        return 1
+    if is_google_sheets:
+        # Fetch from Google Sheets
+        try:
+            spreadsheet_id, url_gid = parse_google_sheets_url(source)
+
+            # Use sheet arg if provided, otherwise use GID from URL
+            gid = sheet if sheet else url_gid
+
+            # Get API key from arg or environment
+            key = api_key or os.environ.get("GOOGLE_API_KEY")
+
+            csv_content = fetch_google_sheet_csv(spreadsheet_id, gid, key)
+            csv_file = io.StringIO(csv_content)
+            source_display = f"Google Sheet {spreadsheet_id}" + (f" (gid={gid})" if gid else "")
+
+        except ValueError as e:
+            logger.error(str(e))
+            return 1
+        except Exception as e:
+            logger.error(f"Failed to fetch Google Sheet: {e}")
+            return 1
+    else:
+        # Local CSV file
+        path = Path(source)
+        if not path.exists():
+            logger.error(f"File not found: {path}")
+            return 1
+
+        if path.suffix.lower() != ".csv":
+            logger.error(f"Expected CSV file, got: {path.suffix}")
+            return 1
+
+        csv_file = open(path, newline="", encoding="utf-8")
+        source_display = str(path)
 
     try:
         samples = []
-        with open(path, newline="", encoding="utf-8") as f:
-            reader = csv.DictReader(f)
+        reader = csv.DictReader(csv_file)
 
-            # Check columns exist
-            if reader.fieldnames is None:
-                logger.error("CSV file appears to be empty")
-                return 1
+        # Check columns exist
+        if reader.fieldnames is None:
+            logger.error("CSV data appears to be empty")
+            return 1
 
-            if instruction_col not in reader.fieldnames:
-                logger.error(f"Column '{instruction_col}' not found. Available: {', '.join(reader.fieldnames)}")
-                return 1
-            if output_col not in reader.fieldnames:
-                logger.error(f"Column '{output_col}' not found. Available: {', '.join(reader.fieldnames)}")
-                return 1
+        if instruction_col not in reader.fieldnames:
+            logger.error(f"Column '{instruction_col}' not found. Available: {', '.join(reader.fieldnames)}")
+            return 1
+        if output_col not in reader.fieldnames:
+            logger.error(f"Column '{output_col}' not found. Available: {', '.join(reader.fieldnames)}")
+            return 1
 
-            for row in reader:
-                instruction = row[instruction_col].strip()
-                output = row[output_col].strip()
+        for row in reader:
+            instruction = row[instruction_col].strip()
+            output = row[output_col].strip()
 
-                # Skip empty rows
-                if not instruction or not output:
-                    continue
+            # Skip empty rows
+            if not instruction or not output:
+                continue
 
-                samples.append({
-                    "instruction": instruction,
-                    "output": output,
-                })
+            samples.append({
+                "instruction": instruction,
+                "output": output,
+            })
 
         if not samples:
-            logger.error("No valid samples found in CSV")
+            logger.error("No valid samples found in data")
             return 1
 
         # Write JSON output
@@ -726,14 +845,17 @@ def import_csv(file_path: str, output_path: str, instruction_col: str, output_co
             json.dump(samples, f, indent=2)
 
         print(f"\nImport complete:")
-        print(f"  Source: {path}")
+        print(f"  Source: {source_display}")
         print(f"  Output: {output} ({len(samples)} samples)")
 
         return 0
 
     except Exception as e:
-        logger.error(f"Failed to import CSV: {e}")
+        logger.error(f"Failed to import data: {e}")
         return 1
+    finally:
+        if not is_google_sheets:
+            csv_file.close()
 
 
 if __name__ == "__main__":

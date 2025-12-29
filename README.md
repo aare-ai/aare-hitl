@@ -129,7 +129,7 @@ aare generate --config generate.yaml
 | `aare compare --config <file>` | Interactive HITL comparison |
 | `aare generate --config <file>` | Generate from a trained model |
 | `aare data validate <file>` | Validate a dataset file |
-| `aare data import <csv> -o <json>` | Import CSV (e.g., from Google Sheets) |
+| `aare data import <source> -o <json>` | Import CSV file or Google Sheets URL |
 | `aare data merge <base> --remove <file> -o <output>` | Remove rejected samples |
 | `aare data merge <base> --add <file> -o <output>` | Add new samples |
 
@@ -233,17 +233,45 @@ Also accepts:
 
 ### Using Google Sheets
 
-You can manage training data in Google Sheets and import it:
+You can manage training data in Google Sheets and import it directly:
+
+#### Option 1: Import from URL (recommended)
 
 1. Create a Google Sheet with columns `instruction` and `output`
-2. Export: **File → Download → Comma-separated values (.csv)**
-3. Import to JSON:
+2. Share the sheet: **Share → Anyone with the link → Viewer**
+3. Copy the URL and import directly:
+
+```bash
+aare data import "https://docs.google.com/spreadsheets/d/YOUR_SHEET_ID/edit" -o dataset.json
+```
+
+For private sheets, use a Google API key:
+
+```bash
+# Via command line
+aare data import "https://..." -o dataset.json --api-key YOUR_API_KEY
+
+# Or via environment variable
+export GOOGLE_API_KEY=your_key
+aare data import "https://..." -o dataset.json
+```
+
+To import a specific sheet tab, use the `--sheet` option with the GID (found in the URL after `#gid=`):
+
+```bash
+aare data import "https://..." -o dataset.json --sheet 123456789
+```
+
+#### Option 2: Download as CSV
+
+1. Export: **File → Download → Comma-separated values (.csv)**
+2. Import the CSV file:
 
 ```bash
 aare data import mydata.csv -o dataset.json
 ```
 
-Custom column names:
+#### Custom column names
 
 ```bash
 aare data import mydata.csv -o dataset.json --instruction-col question --output-col answer
@@ -357,6 +385,7 @@ Core:
 | `AARE_LOG_FORMAT` | `text` or `json` | `text` |
 | `AARE_DATA_DIR` | Data directory | `./data` |
 | `AARE_MODELS_DIR` | Models directory | `./models` |
+| `GOOGLE_API_KEY` | Google API key for private sheets | - |
 
 ## License
 
