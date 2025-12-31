@@ -344,12 +344,12 @@ def run_compare(args: argparse.Namespace) -> int:
 
         if accepted_samples:
             with open(accepted_path, "w") as f:
-                json.dump(accepted_samples, f, indent=2)
+                json.dump(accepted_samples, f, indent=2, ensure_ascii=False)
             print(f"  Saved {len(accepted_samples)} accepted samples to {accepted_path}")
 
         if rejected_samples:
             with open(rejected_path, "w") as f:
-                json.dump(rejected_samples, f, indent=2)
+                json.dump(rejected_samples, f, indent=2, ensure_ascii=False)
             print(f"  Saved {len(rejected_samples)} rejected samples to {rejected_path}")
 
     # Main loop
@@ -655,7 +655,7 @@ def merge_datasets(base_path: str, add_path: str | None, remove_path: str | None
     try:
         output = Path(output_path)
         with open(output, "w") as f:
-            json.dump(result, f, indent=2)
+            json.dump(result, f, indent=2, ensure_ascii=False)
 
         print(f"\nMerge complete:")
         print(f"  Base: {len(base_data)} samples")
@@ -842,7 +842,7 @@ def import_data(
         # Write JSON output
         output = Path(output_path)
         with open(output, "w") as f:
-            json.dump(samples, f, indent=2)
+            json.dump(samples, f, indent=2, ensure_ascii=False)
 
         print(f"\nImport complete:")
         print(f"  Source: {source_display}")
