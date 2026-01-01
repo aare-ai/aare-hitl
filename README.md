@@ -92,11 +92,13 @@ aare compare --config compare.yaml
 
 This launches an interactive session where you can:
 
-- View each training sample
-- Press `c` to generate and compare base vs fine-tuned outputs
+- View the prompt with both base model and fine-tuned model responses
 - Accept (`a`), reject (`r`), or skip (`s`) samples
+- Press `e` to show the expected training output
 - Navigate with `n`/`p` for next/previous
 - Quit with `q`
+
+Responses are cached for fast navigation between samples.
 
 Accepted and rejected samples are saved to `compare_results/accepted.json` and `compare_results/rejected.json`.
 
