@@ -297,8 +297,26 @@ def run_compare(args: argparse.Namespace) -> int:
     reviewed_indices: set[int] = set()
     current_idx = 0
 
-    def show_sample(idx: int) -> None:
-        """Display a sample with all three outputs."""
+    # Cache for generated responses (idx -> (base, finetuned))
+    response_cache: dict[int, tuple[str, str]] = {}
+
+    def generate_responses(idx: int) -> tuple[str, str]:
+        """Generate responses from both models (with caching)."""
+        if idx in response_cache:
+            return response_cache[idx]
+
+        sample = samples[idx]
+        prompt = sample.get("instruction", sample.get("prompt", sample.get("text", "")))
+
+        # Generate from both models - use shorter max_tokens for speed
+        base_resp = engine.generate_base(prompt, max_tokens=256)
+        ft_resp = engine.generate_finetuned(prompt, max_tokens=256)
+
+        response_cache[idx] = (base_resp, ft_resp)
+        return base_resp, ft_resp
+
+    def show_sample(idx: int, show_expected: bool = False) -> None:
+        """Display a sample with model responses."""
         if idx < 0 or idx >= len(samples):
             return
 
@@ -318,22 +336,24 @@ def run_compare(args: argparse.Namespace) -> int:
 
         print(f"\n{'=' * 60}")
         print(f"Sample {idx + 1}/{len(samples)}{status}")
-        print(f"[a]ccept  [r]eject  [s]kip  [c]ompare  [n]ext  [p]rev  [q]uit")
+        print(f"[a]ccept  [r]eject  [s]kip  [e]xpected  [n]ext  [p]rev  [q]uit")
         print(f"{'=' * 60}")
         print(f"\nPROMPT:\n{prompt}")
+
+        # Generate responses (cached after first call)
+        if idx not in response_cache:
+            print(f"\n  Generating responses...")
+
+        base_resp, ft_resp = generate_responses(idx)
+
         print(f"\n{'─' * 40}")
-        print(f"TRAINING OUTPUT:\n{expected[:500]}{'...' if len(expected) > 500 else ''}")
+        print(f"FINE-TUNED:\n{ft_resp[:600]}{'...' if len(ft_resp) > 600 else ''}")
+        print(f"\n{'─' * 40}")
+        print(f"BASE MODEL:\n{base_resp[:600]}{'...' if len(base_resp) > 600 else ''}")
 
-    def generate_comparison(idx: int) -> tuple[str, str]:
-        """Generate from base and fine-tuned models."""
-        sample = samples[idx]
-        prompt = sample.get("instruction", sample.get("prompt", sample.get("text", "")))
-
-        # Generate from both models (already loaded in memory)
-        base_resp = engine.generate_base(prompt, max_tokens=512)
-        ft_resp = engine.generate_finetuned(prompt, max_tokens=512)
-
-        return base_resp, ft_resp
+        if show_expected:
+            print(f"\n{'─' * 40}")
+            print(f"EXPECTED (training data):\n{expected[:600]}{'...' if len(expected) > 600 else ''}")
 
     def save_results() -> None:
         """Save accepted and rejected samples to files."""
@@ -354,22 +374,14 @@ def run_compare(args: argparse.Namespace) -> int:
 
     # Main loop
     print(f"\nResults will be saved to: {output_dir}/")
-    show_comparison = False
-    last_comparison: tuple[str, str] | None = None
+    show_expected = False
 
     while True:
-        show_sample(current_idx)
-
-        # Show comparison results if we just generated them
-        if show_comparison and last_comparison:
-            print(f"\n{'─' * 40}")
-            print(f"FINE-TUNED:\n{last_comparison[1]}")
-            print(f"\n{'─' * 40}")
-            print(f"BASE MODEL:\n{last_comparison[0]}")
-            show_comparison = False
+        show_sample(current_idx, show_expected=show_expected)
+        show_expected = False  # Reset after showing
 
         try:
-            cmd = input(f"\n[a/r/s/c/n/p/q] > ").strip().lower()
+            cmd = input(f"\n[a/r/s/e/n/p/q] > ").strip().lower()
         except (KeyboardInterrupt, EOFError):
             print("\n")
             break
@@ -388,7 +400,6 @@ def run_compare(args: argparse.Namespace) -> int:
             reviewed_indices.add(current_idx)
             print("  Accepted")
             current_idx = min(current_idx + 1, len(samples) - 1)
-            last_comparison = None
         elif cmd == "r":
             sample = samples[current_idx]
             # Remove from accepted if previously accepted
@@ -401,7 +412,6 @@ def run_compare(args: argparse.Namespace) -> int:
             reviewed_indices.add(current_idx)
             print("  Rejected")
             current_idx = min(current_idx + 1, len(samples) - 1)
-            last_comparison = None
         elif cmd == "s":
             sample = samples[current_idx]
             # Remove from both lists if previously categorized
@@ -413,17 +423,12 @@ def run_compare(args: argparse.Namespace) -> int:
             reviewed_indices.add(current_idx)
             print("  Skipped")
             current_idx = min(current_idx + 1, len(samples) - 1)
-            last_comparison = None
-        elif cmd == "c":
-            print("\nGenerating comparisons (this may take a moment)...")
-            last_comparison = generate_comparison(current_idx)
-            show_comparison = True
+        elif cmd == "e":
+            show_expected = True
         elif cmd == "n":
             current_idx = min(current_idx + 1, len(samples) - 1)
-            last_comparison = None
         elif cmd == "p":
             current_idx = max(current_idx - 1, 0)
-            last_comparison = None
 
     # Summary and save
     print(f"\n{'=' * 60}")
